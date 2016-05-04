@@ -2,6 +2,8 @@
 <html lang="en" ng-app="finalassignment">
 <head>
     <title>Title</title>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:300' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <script src="js/jquery.min.js"></script>
@@ -21,24 +23,28 @@
         .red {
             background-color: red;
         }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            margin: 2em;
+        }
     </style>
 </head>
 <body ng-controller="mainCtrl">
 
 <div class="container-fluid">
     <!--Row with two equal columns-->
+    <div class="row text-center">
+        <h1>MYTODO</h1>
+        <div class="lead">Do your stuff</div>
+    </div>
     <div class="row">
-        <div class="red col-xs-6 col-xs-offset-3">
+        <div class="red col-xs-6" id="containerTaskList">
             <p class="demo-content text-center">{{testVar}}</p>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-xs-6 col-xs-offset-3">
-
-            <div>{{otherVar}}</div>
-            <button class="btn btn-danger" ng-click="testFunc()">clickity</button>
-
+        <div class="red col-xs-6" id="containerTaskDetail">
+            <p class="demo-content text-center">{{testVar}}</p>
         </div>
     </div>
 </div>
