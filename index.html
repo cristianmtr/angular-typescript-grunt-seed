@@ -28,7 +28,7 @@
     <div class="row">
         <div class="demo-content border-show col-md-3 col-md-offset-2 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0" id="containerTaskList">
 
-                    <p class="border-show row text-center" ng-repeat="task in tasks">
+                    <p class="border-show row text-center" ng-repeat="task in tasks" ng-click="focusTask(task.title)">
                         {{task.title}}
                     </p>
         </div>

@@ -1,9 +1,10 @@
-# ANGULAR - TYPESCRIPT - BOOTSTRAP SEED
+# SCHOOL FINAL ASSIGNMENT
 
-Seed for angular + bootstrap + typescript projects;
+## SCHEMA
 
-## tools:
-
-    grunt: open, watch, ts compile;
-
-    tsd: install typings;
+Tasks:
+* id
+* title
+* description
+* last modified
+* author

@@ -20,8 +20,8 @@ class Task {
      */
     public static GetAllTasks(): Task[] {
         var tasks: Task[] = [];
-        var task1: Task = new Task("My first task", "Fill in this site with my tasks", new Date().getTime());
-        var task2: Task = new Task("My second task", "Do the tasks", new Date().getTime());
+        var task1: Task = new Task(1,"My first task", "Fill in this site with my tasks", new Date().getTime());
+        var task2: Task = new Task(2,"My second task", "Do the tasks", new Date().getTime());
         tasks.push(task1);
         tasks.push(task2);
         return tasks;
@@ -29,13 +29,13 @@ class Task {
 
     private title: string;
     private description: string;
-    private deadline: number;
+    private lastmodified: number;
 
-    constructor(title:string, description: string, deadline: number) {
+    constructor(id: number, title:string, description: string, lastmodified: number) {
         console.log("creating new task", title);
         this.title = title;
         this.description = description;
-        this.deadline = deadline;
+        this.lastmodified= lastmodified;
     }
 
 }
