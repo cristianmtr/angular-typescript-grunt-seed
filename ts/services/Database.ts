@@ -1,13 +1,17 @@
-///<reference path='../../typings/tsd.d.ts'/>
-
 module Application.Services {
 
     export class Database {
 
+        // DI WITH ANGULAR
+         static $inject = ["$rootScope"];
+
         public static NAME: string = "database";
 
-        constructor() {
+        constructor($rootScope) {
             console.log("Database");
+            $rootScope.$broadcast('eventFired', {
+                    data: "DATABASE LOADED"
+                })
         }
 
         public testVar: number = 232;
