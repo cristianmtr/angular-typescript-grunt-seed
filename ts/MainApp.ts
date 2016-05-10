@@ -1,14 +1,13 @@
 /// <reference path="../typings/tsd.d.ts" />
+
 module Application {
 
-var appModule = angular.module("MainApp", []);
+    var appModule = angular.module("MainApp", []);
 
-appModule.controller(Application.Controllers.MainController.NAME,
-    ["$scope", "database", ($scope, database) => new Application.Controllers.MainController($scope, database)]);
+// THIS WAY YOU DON'T NEED TO SPECIFY DEPENDENCIES AND CAN USE static $inject = [<dependendecies>] IN YOUR CLASSES
+    appModule.controller(Application.Controllers.MainController.NAME, Application.Controllers.MainController);
 
-appModule.service("database", () => {
-    return new Application.Services.Database();
-});
+    appModule.service("database", Application.Services.Database);
 
 // TODO
 // appModule.directive("myDirective", ()
